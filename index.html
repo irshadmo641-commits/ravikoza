@@ -116,3 +116,4 @@ if(k==="promo"){$("pCode").value=C.promoCode||"";$("pPct").value=C.promoPct||0}}
 async function push(){if(API){try{let r=await api("cfg",{R,C:{date:C.date,ann:C.ann,on:C.on,home:C.home,pick:C.pick,info:C.info,min:C.min,gal:C.gal,promoCode:C.promoCode,promoPct:C.promoPct,stock:C.stock}});if(r.err){alert("Save नहीं हुआ ("+r.err+")");return false}}catch(e){alert("Internet चेक करें, Save नहीं हुआ");return false}}S("fsrates",R);S("fscfg",C);return true}
 async function saveRates(){let od=[R,C.date,C.stock,C.min];R={o:+$("arO").value||R.o,b:+$("arB").value||R.b,m:+$("arM").value||R.m};C.date=new Date().toLocaleDateString("en-IN");
 C.stock={o:$("asO").value===""?null:+$("asO").value,b:$("asB").value===""?null:+$("asB").
+</script></body></html>
